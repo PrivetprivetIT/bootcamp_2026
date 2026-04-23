@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Заголовок</title>
+    </head>
+    <body>
+        <h1 id="header" style="color: #FF0000">Привет мир!</h1>
+    <form method="post">
+        <input type="text" name="message">
+        <button type="submit">Нажми меня</button>
+    </form>
+
+    {% for date, text in messages %}
+        <p>{{date}} - {{text}}</p>
+    {% endfor %}
+
+    </body>
+</html>
+<script>
+    function changeColor(color){
+        const h1 = document.getElementById('header');
+        switch(color) {
+            case 'red':
+                h1.style.color = '#FF0000';
+                break;
+            case 'green':
+                h1.style.color = '#00FF00';
+                break;
+            case 'blue':
+                h1.style.color = '#0000FF';
+                break;
+        }
+    }
+</script>
